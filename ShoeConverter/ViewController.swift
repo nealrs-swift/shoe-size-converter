@@ -10,6 +10,19 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var textField: UITextField!
+    
+    @IBOutlet weak var ConvertedLabel: UILabel!
+    
+    @IBAction func convertButton(sender: UIButton) {
+        var oSize = Double((textField.text as NSString).doubleValue)
+        let cc = 30.5
+        
+        ConvertedLabel.hidden = false
+        ConvertedLabel.text = "\(oSize + cc)" + " Euro Size"
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
